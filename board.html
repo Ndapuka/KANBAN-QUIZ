@@ -1,72 +1,52 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kanban Board</title>
-        <link rel="stylesheet" href="board_style.css">
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        
-    </head>
-    <body>
-    <div class="container">
-        <button type="button" onclick="startGame()" class="btn startGameBtn">Base class</button>
-        <div class="game" style="display: none;">
-            <div class="board">
-                <div id="todo" class="column">
-                    <h2>Todo</h2>
-                </div>
-                <div id="learn" class="column">
-                    <h2>Learn</h2>
-                </div>
-                <div id="quiz" class="column">
-                    <h2>Quiz</h2>
-                </div>
-                <div id="test" class="column">
-                    <h2>Test</h2>
-                </div>
-                <div id="done" class="column">
-                    <h2>Done</h2>
-                </div> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="board_style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+</head>
+<body>
+    
+<div class="container text-center">
+    <h1>
+        KBQuiz
+    </h1>
+    <button type="button" onclick="startGame()" class="btn btn-primary startGameBtn">Start Game</button>
+    <div class="game" style="display: none;">
+        <div class="board">
+            <div id="todo" class="column">
+                <h2>Todo</h2>
             </div>
-            <div class="card container" id="questionModal" style="display: none;">
-                <div class="card-title">
-                    <h2 id="question"></h2>
-                </div>
-                <div class="card-body">
-                    <div class="container">
-                        <div class="row">
-                            <label>
-                                <input id="option1" type="radio" name="answer"> 
-                                <span id="option1Label"></span>
-                            </label>
-                        </div>
-                        <div class="row">
-                            <label>
-                                <input id="option2" type="radio" name="answer">
-                                <span id="option2Label"></span> 
-                            </label>
-                        </div>
-                        <div class="row">
-                            <label>
-                                <input id="option3" type="radio" name="answer" > 
-                                <span id="option3Label"></span> 
-                            </label>
-                        </div>
-        
-                    </div>
-                    <button type="button" class="btn btn-light mt-3" onclick="submitAnswer()">Submit Answer</button>
-                </div>
-                
+            <div id="learn" class="column">
+                <h2>Learn</h2>
             </div>
+            <div id="quiz" class="column">
+                <h2>Quiz</h2>
+            </div>
+            <div id="test" class="column">
+                <h2>Test</h2>
+            </div>
+            <div id="done" class="column">
+                <h2>Done</h2>
+            </div> 
+        </div>
+        <div id="learnModal" style="display: none;">
+            
+        </div>
+         <div id="questionModal" style="display: none;">
+            
         </div>
     </div>
-    
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script type="module" src="board_events.js"></script>
-    </body>
-    </html>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="board_events.js"></script>
+</body>
+</html>
